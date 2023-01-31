@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class addBlankPageToPDF {
-    //Lee la ruta del directorio desde la variable de entorno previamente definida y agrega una páginaen blanco a cada
+    //Lee la ruta del directorio desde la variable de entorno previamente definida y agrega una página en blanco a cada
     //archivo PDF
     public static void main(String[] args) {
         String directoryPath = System.getenv("VIAFIRMA_PATH");
@@ -14,7 +14,7 @@ public class addBlankPageToPDF {
 
     }
 
-    //Verifica si la ruta del directorio es valida y si contiene arvhicos PDF, entonces agrega una página en blanco a
+    //Verifica si la ruta del directorio es válida y si contiene archivos PDF, entonces agrega una página en blanco a
     //cada archivo PDF
     private static void verifyPath(String directoryPath) {
         File directory = new File(directoryPath);
