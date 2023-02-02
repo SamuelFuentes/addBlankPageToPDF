@@ -4,7 +4,7 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import java.io.File;
 import java.io.IOException;
 
-public class addBlankPageToPDF {
+public class AddBlankPageToPDF {
     //Lee la ruta del directorio desde la variable de entorno previamente definida y agrega una página en blanco a cada
     //archivo PDF
     public static void main(String[] args) {
