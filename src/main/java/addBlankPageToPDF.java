@@ -9,9 +9,13 @@ public class addBlankPageToPDF {
     //archivo PDF
     public static void main(String[] args) {
         String directoryPath = System.getenv("VIAFIRMA_PATH");
-
-        verifyPath(directoryPath);
-
+        if(directoryPath != null) {
+            verifyPath(directoryPath);
+        } else {
+            System.out.println("La variable de entorno directoryPath no está definida, por favor corrija este error" +
+                    "antes de volver a ejecutar la aplicación");
+            return;
+        }
     }
 
     //Verifica si la ruta del directorio es válida y si contiene archivos PDF, entonces agrega una página en blanco a
