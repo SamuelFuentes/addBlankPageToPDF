@@ -43,14 +43,20 @@ public class AddBlankPageToPDF {
 
     //Abre el archivo PDF y agrega una página en blanco al final del archivo
     private static void addBlankPage(File file) {
+        PDDocument document = null;
         try {
-            PDDocument document = PDDocument.load(file);
+            document = PDDocument.load(file);
             PDPage blankPage = new PDPage();
             document.addPage(blankPage);
             document.save(file);
-            document.close();
         } catch (IOException e) {
             System.out.println("Error al agregar una página en blanco al archivo " + file.getName());
+        } finally {
+            try {
+                document.close();
+            } catch (IOException e) {
+                System.out.println("Error al cerrar el documento " + file.getName());
+            }
         }
     }
 
